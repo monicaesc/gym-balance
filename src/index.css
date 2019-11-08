@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.classGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.figure {
+  flex-basis: calc(33.33% - 4rem);
+  border: 1px solid;
+  padding: 2rem;
+  flex-grow: 1;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.gymClass {
+  width: calc(100% + 4rem);
+  margin: -2rem 0rem 0rem -2rem
+}
+
+
+.info-button {
+  margin: 20px auto;
+  display: table;
+}
+
+
+
+
+
+.register-button {
+
+}
