@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import GymClass from './GymClass'
 import PropTypes from 'prop-types'
-import { Link } from "react-router-dom";
 
 class ClassSchedule extends Component {
   render() {
