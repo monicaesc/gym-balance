@@ -127,7 +127,6 @@ class Balance extends Component {
   }
 
 
-
   render() {
 
     console.log("Balance - render: " + this.state.currentUser);

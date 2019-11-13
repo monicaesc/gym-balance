@@ -2,9 +2,10 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif, Lucida Console;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F5F5DC
 }
 
 code {
@@ -32,6 +33,7 @@ p {
   padding: 2rem;
   flex-grow: 1;
   margin: 0 2rem 2rem 2rem;
+
 }
 
 .gymClass {
@@ -46,25 +48,34 @@ p {
 }
 
 
-
-
-
 .register-button {
 
 }
 
-.backgound {
-  color:black
-}
-
 .gymInfo{
-  border: 1px solid #ddd;
-  width: 600px;
-  height: 900
+  padding: 20px;
+  width: 50%;
+  float: left;
+  border: 1px solid gray;
+  height: 400px;
 }
 
 .gymInfo1{
   border: 1px solid #ddd;
   width: 1000px;
-  height: 1500
+}
+
+.HomePage {
+  margin: 0;
+}
+
+.navbar{
+  background: beige;
+}
+.Parrafo{
+  padding: 20px;
+  width: 50%;
+  float: left;
+  text-align: justify;
+  font-family: "Lucida Console",
 }

@@ -6,7 +6,11 @@ import PropTypes from 'prop-types'
 class ClassSchedule extends Component {
   render() {
     return <div>
-              <Title title={'Schedule'}/>
+      <br>
+      </br>
+              <Title title={'Class Schedule'}/>
+                <br>
+                </br>
               <div className="classGrid">
                 {this.props.gymClasses.map((gymClass, index) => <GymClass key={index} gymClass={gymClass} onRegisterGymClass={this.props.onRegisterGymClass} /> )}
               </div>

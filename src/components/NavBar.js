@@ -5,14 +5,14 @@ import GeneralUtils from '../core/GeneralUtils';
 class NavBar extends Component {
 
   constructor(props) {
-      super(props);
+    super(props);
 
-      this.state = {
-          currentUser: props.currentUser,
-          currentActiveLink: ''
-      };
+    this.state = {
+      currentUser: props.currentUser,
+      currentActiveLink: ''
+    };
 
-      console.log("NavBar Constructor")
+    console.log("NavBar Constructor")
   }
 
   componentDidMount() {
@@ -27,61 +27,61 @@ class NavBar extends Component {
 
   //Called any time the Props have Changed in the Redux Store
   UNSAFE_componentWillReceiveProps(nextProps) {
-      //Check if the Props for Services have in fact changed.
-      if (this.props.currentUser !== nextProps.currentUser) {
-          this.setState({
-              currentUser: nextProps.currentUser,
-              hover: false
-          });
-      }
+    //Check if the Props for Services have in fact changed.
+    if (this.props.currentUser !== nextProps.currentUser) {
+      this.setState({
+        currentUser: nextProps.currentUser,
+        hover: false
+      });
+    }
   }
 
   buildAnonymousUserNavItems() {
 
-      return (
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <Link className="nav-link" to="/login">Login</Link>
-          </li>
-          <li className="nav-item active">
-            <Link className="nav-link" to="/sign-up">Signup</Link>
-          </li>
-        </ul>
-      );
+    return (
+      <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+      <Link className="nav-link" to="/login">Login</Link>
+      </li>
+      <li className="nav-item active">
+      <Link className="nav-link" to="/sign-up">Signup</Link>
+      </li>
+      </ul>
+    );
   }
 
   buildLoggedInNavItems(name) {
 
-      return (
-        <ul className="navbar-nav mr-auto">
-        <li className="nav-item">
-          <Link className="nav-link" to="/gym-info">Gym Info</Link>
-        </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/schedule">Class Schedule</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/my-schedule">My Schedule</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/contact">Contact</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/" onClick={this.onLogOutClick}>Log Out</Link>
-          </li>
-          <li className="nav-item">
-          <div className="nav-link"> Hi, you are logged as a
-          {name}
-          </div>
-          </li>
-        </ul>
-      );
+    return (
+      <ul className="navbar-nav mr-auto">
+      <li className="nav-item">
+      <Link className="nav-link" to="/gym-info">Gym Info</Link>
+      </li>
+      <li className="nav-item">
+      <Link className="nav-link" to="/schedule">Class Schedule</Link>
+      </li>
+      <li className="nav-item">
+      <Link className="nav-link" to="/my-schedule">My Schedule</Link>
+      </li>
+      <li className="nav-item">
+      <Link className="nav-link" to="/contact">Contact</Link>
+      </li>
+      <li className="nav-item">
+      <Link className="nav-link" to="/" onClick={this.onLogOutClick}>Log Out</Link>
+      </li>
+      <li className="nav-item">
+      <div className="nav-link"> Hi, you are logged as {name}
+
+      </div>
+      </li>
+      </ul>
+    );
   }
 
   onLogOutClick(event) {
-      event.preventDefault();
-      //Va al servidor de Ruby y cerra la session.
-       window.location.href = 'http://localhost:3001';
+    event.preventDefault();
+    //Va al servidor de Ruby y cerra la session.
+    window.location.href = 'http://localhost:3001';
   }
 
   render() {
@@ -96,14 +96,14 @@ class NavBar extends Component {
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/">Balance Seniors</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      <Link className="navbar-brand" to="/">Balance Seniors</Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+      </button>
 
-        <div className2="collapse navbar-collapse" id="navbarSupportedContent">
-          {navItems}
-        </div>
+      <div className2="collapse navbar-collapse" id="navbarSupportedContent">
+      {navItems}
+      </div>
       </nav>
 
     )
