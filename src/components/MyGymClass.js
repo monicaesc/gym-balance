@@ -1,18 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function GymClass(props) {
+function MyGymClass(props) {
     const gymClass = props.gymClass;
     return <div className="figure">
               <img className="gymClass" src={gymClass.image_url} alt={gymClass.description} />
               <figcaption><p>{gymClass.description}</p></figcaption>
-              <button onClick={() => {props.onRegisterGymClass(gymClass)}}>Register</button>
+              <button onClick={() => {props.onUnregisterGymClass(gymClass)}}>Unregister</button>
           </div>
 }
 
-GymClass.propTypes = {
-  gymClass: PropTypes.object.isRequired,
-  onRegisterGymClass: PropTypes.func.isRequired
-}
 
-export default GymClass
+export default MyGymClass
