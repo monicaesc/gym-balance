@@ -6,15 +6,20 @@ class Contact extends React.Component {
 
     constructor(props) {
       super(props)
+
+      this.state = {
+        isSent: false
+      }
       this.onSubmitClick = this.onSubmitClick.bind(this);
     }
 
     onSubmitClick() {
       console.log("on submit click");
+
+      this.setState({isSent: true})
     }
 
-
-render(){
+form(){
   return(
     <div>
       <Title title={'Contact Us'}/>
@@ -44,6 +49,26 @@ render(){
       </div>
     </div>
   )
+}
+
+formSent(){
+  return (
+  <div>
+    <Title title={'Thank you'}/>
+    <div>
+    We will be in touch soon
+    </div>
+  </div>)
+}
+
+render(){
+  let view = <div/>;
+  if (this.state.isSent) {
+    view = this.formSent();
+  } else {
+    view = this.form();
+  }
+  return(<div>{view}</div>)
 }
 }
 export default Contact;

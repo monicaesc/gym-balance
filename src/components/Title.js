@@ -13,3 +13,4 @@ class Title extends Component {
 }
 
 export default Title
+// componente que muestra el titulo de una pagina

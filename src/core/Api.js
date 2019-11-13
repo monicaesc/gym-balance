@@ -12,3 +12,5 @@ let Api = axios.create({
     });
 
 export default Api;
+
+//funcion para llamar a rails 

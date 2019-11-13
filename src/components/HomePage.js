@@ -8,7 +8,7 @@ class HomePage extends React.Component {
       <div className="info">
         <Title title={'Welcome to Balance Gym'}/>
         <div className="figure">
-          <img className="gymClass" src="https://static01.nyt.com/images/2019/09/23/business/23ageism1/23ageism1-superJumbo.jpg?quality=90&auto=webp" alt="gugu" />
+          <img className="gymInfo1" src="https://static01.nyt.com/images/2019/09/23/business/23ageism1/23ageism1-superJumbo.jpg?quality=90&auto=webp" alt="gugu" />
         </div>
       </div>
     )

@@ -14,6 +14,12 @@ Training sessions are designed to improve cognitive function
 and movement commonly affected by the ageing process.
 Balance Senior programme is designed for people 60+ and adapts
 to different physical conditions.</p>
+
+<div className="figure">
+          <img className="gymInfo" src="/exercise.jpg"/>
+      </div>
+
+
     </div>
   )
 }

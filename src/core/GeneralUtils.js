@@ -12,3 +12,5 @@ let GeneralUtils = (function () {
 }());
 
 export default GeneralUtils;
+
+// funcion para saber si un usuario esta autenticado o no

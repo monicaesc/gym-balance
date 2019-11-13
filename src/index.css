@@ -52,3 +52,19 @@ p {
 .register-button {
 
 }
+
+.backgound {
+  color:black
+}
+
+.gymInfo{
+  border: 1px solid #ddd;
+  width: 600px;
+  height: 900
+}
+
+.gymInfo1{
+  border: 1px solid #ddd;
+  width: 1000px;
+  height: 1500
+}

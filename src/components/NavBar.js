@@ -50,7 +50,7 @@ class NavBar extends Component {
       );
   }
 
-  buildLoggedInNavItems() {
+  buildLoggedInNavItems(name) {
 
       return (
         <ul className="navbar-nav mr-auto">
@@ -69,7 +69,11 @@ class NavBar extends Component {
           <li className="nav-item">
             <Link className="nav-link" to="/" onClick={this.onLogOutClick}>Log Out</Link>
           </li>
-
+          <li className="nav-item">
+          <div className="nav-link"> Hi, you are logged as a
+          {name}
+          </div>
+          </li>
         </ul>
       );
   }
@@ -84,7 +88,7 @@ class NavBar extends Component {
     let navItems = <div/>;
     let isUserLoggedIn = GeneralUtils.isUserLoggedIn(this.props.currentUser);
     if (isUserLoggedIn) {
-      navItems = this.buildLoggedInNavItems();
+      navItems = this.buildLoggedInNavItems(this.props.currentUser.name);
     } else {
       navItems = this.buildAnonymousUserNavItems();
     }
